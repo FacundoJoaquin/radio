@@ -18,42 +18,43 @@
     </div>
 </nav>
 <div class="hero">
-    <img src="city (1).png" alt="" class="city">
+    <img src="po.png" class="city" alt="">
 </div>
 
 <style>
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 1rem;
-        background-color: #C4DFDF;
-    }
-
-    .col-1 {
-        grid-column: span 1;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .col-2 {
-        grid-column: span 2;
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 20px;
-    }
-
-    .hero {
-        background-color: #C4DFDF;
-        height: 400px;
-        position: relative;
-    }
-
-    .city {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        object-fit: fill;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    background-color: #C4DFDF;
 }
+
+.col-1 {
+    grid-column: span 1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.col-2 {
+    grid-column: span 2;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.hero {
+    background-color: #C4DFDF;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 </style>
