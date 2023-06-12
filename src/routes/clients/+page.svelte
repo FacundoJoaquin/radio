@@ -7,6 +7,8 @@
     import SearchIcon from "../components/atoms/icons/SearchIcon.svelte";
     
     let clients = [];
+    let search = '';
+
 
     async function fetchClients() {
         const URL = 'https://jsonplaceholder.typicode.com/users';
@@ -22,6 +24,12 @@
         console.log(clients);
     });
 
+    const filterClients = () => {
+        if(search === '') {
+
+        }
+    }
+
     let name;
     let phone;
     let address;
@@ -31,18 +39,18 @@
 </script>
 
 <main class="flex flex-col">
-    <div class="absolute h-screen bg-edgewater-200 w-1/3 mix-blend-multiply "/>
-
-    <div class="flex justify-center mt-4">
-        <form action="" class="mb-2">
+    
+    <div style="margin-top:-0.4rem" class="flex justify-center">
+        <form action="" class="mb-1">
             <label for="search" class="">
                 <SearchIcon/>
             </label>
-            <input type="text" name="search" class="rounded-2xl border shadow-md py-1 px-2 pl-8 ring-1 focus:outline-edgewater-400 " />
+            <input bind:value={search} type="text" name="search" class="rounded-2xl border shadow-md py-1 px-2 pl-8 ring-1 focus:outline-edgewater-400 " />
         </form>
     </div>
-    <div class="border flex justify-center w-full z-2 shadow-2xl  mt-4 ">
-        <table class="w-full cursor-default">
+    <div class="absolute h-full bg-edgewater-200 w-1/3 z-0"/> <!-- scroll -->
+    <div class="border flex justify-center w-full z-2 shadow-2xl z-10 bg-white  mt-4 ">
+        <table id="t1" class="w-full cursor-default ">
             <thead>
                 <tr>
                     <Th>Nombre</Th>
@@ -69,3 +77,7 @@
 
     </div>
 </main>
+
+<style>
+
+</style>

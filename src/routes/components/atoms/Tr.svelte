@@ -1,0 +1,1 @@
+<tr class="hover:bg-edgewater-100 dark:hover:edgewater-500"><slot /></tr>

@@ -1,5 +1,6 @@
 <script>
     import '../../app.css'
+    import Navbar from '../components/organisms/Navbar.svelte';
 </script>
 
 
@@ -22,6 +23,9 @@
 </div>
 
 <style>
+.navBar {
+    display: none;
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
