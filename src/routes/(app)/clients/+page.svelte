@@ -22,30 +22,22 @@
     }
     onMount(async () => {
         clients = await fetchClients();
-        console.log(clients);
     });
 
-    const filterClients = () => {};
-
-    let name;
-    let phone;
-    let address;
-    let taxid;
-    let email;
-
     let showModal = false;
-    const openModal = () => {
-        showModal = true;
-    };
-    const closeModal = () => {
-        showModal = false;
-    };
-    const handleModal = () => {
-        console.log(openModal);
-    };
+
+    function openModal() {
+		showModal = true;
+
+	}
+
+	function closeModal() {
+		showModal = false;
+	}
+   
 </script>
 
- <Modal {showModal} on:closeModal={closeModal}>
+ <Modal title='Agregar monos' {showModal} on:closeModal={closeModal}>
     <CreateClientForm />
 </Modal> 
 
@@ -53,7 +45,6 @@
     <div style="margin-top:-0.4rem" class="flex justify-center">
         <div class="flex flex-row justify-between w-full">
             <h1 class="text-5xl text-gray-600 font-bold font-roboto opacity-70 mt-2 ml-2" >Clientes</h1>
-
             <form action="" class="mb-1">
                 <label for="search" class="">
                     <SearchIcon />
@@ -66,18 +57,14 @@
                 />
             </form>
             <div class="mt-6 mr-2">
-
                 <button class="border border-edgewater-500 bg-white font-semibold text-edgewater-500 rounded-xl self-center px-3 py-1 hover:bg-edgewater-300 hover:text-white duration-500" on:click={openModal}>Agregar nuevo cliente</button>
             </div>
         </div>
         
     </div>
-
     <div class="absolute h-full bg-edgewater-200 w-1/3 mix-blend-multiply">
     </div>
-    <div
-        class="border flex justify-center w-full shadow-2xl z-10 bg-white mt-4"
-    >
+    <div class="border flex justify-center w-full shadow-2xl z-10 bg-white mt-4">
         <table id="t1" class="w-full cursor-default">
             <thead>
                 <tr>
@@ -95,9 +82,7 @@
                             <Td>{client.name}</Td>
                             <Td>{client.id}</Td>
                             <Td>{client.phone}</Td>
-                            <Td
-                                >{client.address.street}, {client.address
-                                    .city}</Td
+                            <Td>{client.address.street}, {client.address.city}</Td
                             >
                             <Td>{client.email}</Td>
                         </Tr>

@@ -1,19 +1,10 @@
 <script>
-    import { createEventDispatcher } from "svelte";
+
     import Button from "../atoms/Button.svelte";
-    import CloseModalIcon from "../atoms/icons/CloseModalIcon.svelte";
-    export let title;
-    const dispatch = createEventDispatcher();
+
 </script>
 
 <div class="flex flex-col bg-white p-4 rounded-xl">
-    <button type="none" class="self-end" on:click={() => dispatch("closeModal")}
-        ><CloseModalIcon /></button
-    >
-
-    <h2 class="text-2xl font-bold text-center mt-2 mb-4">
-        {title}
-    </h2>
     <form action="" class=" ">
         <div class="grid grid-cols-2 gap-4">
             <div class="flex flex-col col-span-2 items-center">
