@@ -1,23 +1,13 @@
 <script>
 export let href='';
 </script>
-<li class='cursor-pointer flex align-center font-roboto z-10'>
+<li class='cursor-pointer flex items-center font-roboto z-10 relative overflow-hidden mx-2'>
     <a {href}>
         <slot/>
     </a>
 </li>
 
 <style>
-       li {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      font-family: 'Roboto';
-      position: relative;
-      overflow: hidden;
-      margin: 0 10px;
-    }
-  
     li::after {
       content: '';
       position: absolute;
