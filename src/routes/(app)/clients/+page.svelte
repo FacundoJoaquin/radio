@@ -26,9 +26,7 @@
     });
 
     const filterClients = () => {
-        if(search === '') {
-
-        }
+        
     }
 
     let name;
@@ -62,16 +60,17 @@
                 </tr>
             </thead>
             <tbody>
-                
-                {#each clients as client}
-                <Tr>
-                    <Td>{client.name}</Td>
-                    <Td>{client.id}</Td>
-                    <Td>{client.phone}</Td>
-                    <Td>{client.address.street}, {client.address.city}</Td>
-                    <Td>{client.email}</Td>
-                </Tr>
-                {/each}
+                {#if (clients)}
+                    {#each clients as client}
+                    <Tr>
+                        <Td>{client.name}</Td>
+                        <Td>{client.id}</Td>
+                        <Td>{client.phone}</Td>
+                        <Td>{client.address.street}, {client.address.city}</Td>
+                        <Td>{client.email}</Td>
+                    </Tr>
+                    {/each}
+                {/if}
 
             </tbody>
         </table>
