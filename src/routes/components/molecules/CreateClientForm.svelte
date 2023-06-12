@@ -61,7 +61,7 @@
         </div>
         <!--         <textarea name="" id="" cols="1" class="w-3/4 p-2 bg-red-500 rounded-2xl self-center mt-2 mb-4" rows="8"></textarea>
  -->
-        <div class="">
+        <div class="flex justify-center mt-4">
             <Button>Agregar</Button>
         </div>
     </form>
