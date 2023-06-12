@@ -3,8 +3,8 @@
   import NavLink from "../atoms/NavLink.svelte";
 
 </script>
-<nav class="w-screen shadow">
-    <ul class='flex flex-row list-none gap-2 h-4 content-center'>
+<nav class="w-full h-12 z-10 shadow-xl bg-gray-50">
+    <ul class='flex flex-row list-none gap-2 h-full justify-center'>
       <NavLink href='/dashboard'>Dashboard</NavLink>
       <NavLink href='/clients'>Clientes</NavLink>
       <NavLink href='/bookings'>Transmisión</NavLink>
@@ -14,22 +14,3 @@
   </nav>
   
   <slot />
-
-<!--   <style>
-
-    .navBar {
-      width: 100%;
-      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
-    }
-  
-    ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-      height: 50px;
-      justify-content: center;
-    }
-  
- 
-
-  </style> -->

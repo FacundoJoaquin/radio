@@ -1,7 +1,7 @@
 <script>
 export let href='';
 </script>
-<li>
+<li class='cursor-pointer flex align-center font-roboto z-10'>
     <a {href}>
         <slot/>
     </a>

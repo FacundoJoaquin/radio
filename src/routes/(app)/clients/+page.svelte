@@ -1,10 +1,11 @@
 <script>
-    import "../../app.css";
-    import Td from "../../components/atoms/Td.svelte";
-    import Th from "../../components/atoms/Th.svelte";
-    import Tr from "../../components/atoms/Tr.svelte";
+   
     import {onMount} from 'svelte';
-    import SearchIcon from "../../components/atoms/icons/SearchIcon.svelte";
+  import SearchIcon from '../../components/atoms/icons/SearchIcon.svelte';
+  import Th from '../../components/atoms/Th.svelte';
+  import Td from '../../components/atoms/Td.svelte';
+  import Tr from '../../components/atoms/Tr.svelte';
+
     
     let clients = [];
     let search = '';

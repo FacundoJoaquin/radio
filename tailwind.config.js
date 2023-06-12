@@ -4,7 +4,6 @@ export default {
   theme: {
     extend: {
       colors:{
-        
       'edgewater': {
         '50': '#f2f9f9',
         '100': '#dfeeed',
@@ -18,6 +17,9 @@ export default {
         '900': '#304549',
         '950': '#1c2c30',
       }
+    },
+    fontFamily: {
+      'roboto': ['Roboto', 'sans-serif'],
     },
     }
   },
