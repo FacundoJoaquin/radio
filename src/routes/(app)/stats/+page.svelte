@@ -1,17 +1,19 @@
 <script>
+
   import StackedChart from "../../components/organisms/StackedChart.svelte";
 
-  let values = [45, 55];
 
   let radios = [
-    { name: 'lu17', freeSeconds: 0.55, bookedSeconds: 0.45 },
-    { name: 'patagonia', freeSeconds: 0.72, bookedSeconds: 0.28 },
+    { name: 'AM540 - LU17', freeSeconds: 0.55, bookedSeconds: 0.45 },
+    { name: 'Paraiso FM - 96.1', freeSeconds: 0.72, bookedSeconds: 0.28 },
+    { name: 'Trelew Noticias - 96.9', freeSeconds: 0.34, bookedSeconds: 0.66 },
+    {name: 'Total', freeSeconds: (0.55+0.72+0.34)/3, bookedSeconds: (0.45+0.28+0.66)/3}
   ];
+
 
 </script>
 
-{#each radios as radio (radio.name)}
-<div class='flex flex-row w-48 h-48'>
-  <StackedChart {radio} />
-</div>
-{/each}
+<div class='flex max-h-96 bg-white p-4 shadow-md rounded-md '>
+      <StackedChart {radios} />
+
+  </div>
