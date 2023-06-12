@@ -1,5 +1,5 @@
 <script>
-  import StackedChart from "../components/organisms/StackedChart.svelte";
+  import StackedChart from "../../components/organisms/StackedChart.svelte";
 
   let values = [45, 55];
 
